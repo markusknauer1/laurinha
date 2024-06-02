@@ -4,12 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .wpp { /* Ajuste a largura conforme necessário */
+      height: auto;
+      display: flex;
+      position: fixed;
+      background-size: cover;
+    }
+    .laurinha {
+      width: 50%; /* Ajuste a largura conforme necessário */
+      left: 0;
+      top: 0;
+      width: 250px;
+      position: absolute;
+      border-radius: 10px; /* Borda arredondada */
+      border: 10px solid rgba(255, 0, 0, 0.8); /* Inicializa a borda com vermelho */
+      animation: borderAnimation 15s infinite linear; /* Animação para a borda */
+    }
+    @keyframes borderAnimation {
+      0% {
+        border-color: rgba(255, 0, 0, 0.8); /* Vermelho */
+      }
+      25% {
+        border-color: rgba(0, 255, 0, 0.8); /* Verde */
+      }
+      50% {
+        border-color: rgba(0, 0, 255, 0.8); /* Azul */
+      }
+      75% {
+        border-color: rgba(255, 255, 0, 0.8); /* Amarelo */
+      }
+      100% {
+        border-color: rgba(255, 0, 255, 0.8); /* Magenta */
+      }
+    }
+    .caption {
+      position: absolute;
+      bottom: 10px; /* Ajuste a posição conforme necessário */
+      left: 50%; /* Centraliza horizontalmente */
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-  <div>
-    <textarea>
-      teste de conteudo
-    </textarea>
+  <img class="wpp" src="./img/minie.jpg" alt="Princesa do pai">
+  <div class="image-container">
+    <img class="laurinha" src="./img/laurinhadopai.png" alt="Princesa do pai">
+    <div class="caption">Princesa do pai</div>
   </div>
 </body>
 </html>
